@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col justify-center gap-8 px-6 py-16">
       <header className="flex items-center justify-between">
-        <span className="text-muted-foreground text-sm">Template</span>
+        <span className="text-sm text-muted-foreground">Template</span>
         <ModeToggle />
       </header>
 
@@ -15,18 +15,16 @@ export default function Home() {
         <h1 className="text-3xl font-semibold tracking-tight">
           Next.js + Supabase starter
         </h1>
-        <p className="text-muted-foreground text-base leading-7">
+        <p className="text-base leading-7 text-muted-foreground">
           A minimal, production-ready starting point. Sign in to see the
           protected area and the example notes feature.
         </p>
       </div>
 
       <div className="flex gap-3">
-        <Button asChild>
-          <Link href="/login">Sign in</Link>
-        </Button>
-        <Button asChild variant="outline">
-          <Link href="/app">Open app</Link>
+        <Button render={<Link href="/login" />}>Sign in</Button>
+        <Button variant="outline" render={<Link href="/app" />}>
+          Open app
         </Button>
       </div>
     </main>

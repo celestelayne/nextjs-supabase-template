@@ -21,7 +21,9 @@ export function NoteForm() {
           formRef.current?.reset();
           toast.success("Note added");
         } catch (err) {
-          toast.error(err instanceof Error ? err.message : "Failed to add note");
+          toast.error(
+            err instanceof Error ? err.message : "Failed to add note",
+          );
         }
       }}
       className="space-y-3"

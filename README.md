@@ -57,6 +57,7 @@ the example, ship your idea.
    - Additional redirect URLs: `http://localhost:3000/auth/callback`
 
    Add production URLs later (see below).
+
 7. **Run it**:
    ```bash
    pnpm dev

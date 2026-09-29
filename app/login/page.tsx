@@ -51,18 +51,16 @@ export default async function LoginPage(props: {
               />
             </div>
             {sent ? (
-              <p className="text-muted-foreground text-sm">
+              <p className="text-sm text-muted-foreground">
                 Check your inbox for the sign-in link.
               </p>
             ) : null}
-            {error ? (
-              <p className="text-destructive text-sm">{error}</p>
-            ) : null}
+            {error ? <p className="text-sm text-destructive">{error}</p> : null}
           </CardContent>
           <CardFooter className="flex items-center justify-between">
             <Button type="submit">Send magic link</Button>
-            <Button asChild variant="ghost">
-              <Link href="/">Cancel</Link>
+            <Button variant="ghost" render={<Link href="/" />}>
+              Cancel
             </Button>
           </CardFooter>
         </form>

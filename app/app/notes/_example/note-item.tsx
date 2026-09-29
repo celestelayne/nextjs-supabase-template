@@ -33,7 +33,7 @@ export async function NoteItem({ note }: { note: Note }) {
             />
           </div>
         ) : null}
-        <p className="text-muted-foreground text-xs">
+        <p className="text-xs text-muted-foreground">
           {new Date(note.created_at).toLocaleString()}
         </p>
       </CardContent>

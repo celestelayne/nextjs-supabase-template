@@ -5,7 +5,11 @@ import { UserMenu } from "@/app/app/user-menu";
 import { ModeToggle } from "@/components/mode-toggle";
 import { createClient } from "@/lib/supabase/server";
 
-export default async function AppLayout({ children }: LayoutProps<"/app">) {
+export default async function AppLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const supabase = await createClient();
   const {
     data: { user },
